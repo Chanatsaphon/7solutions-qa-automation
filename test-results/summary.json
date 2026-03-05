@@ -1,0 +1,143 @@
+{
+  "config": {
+    "configFile": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation/playwright.config.ts",
+    "rootDir": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results/summary.json"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results/e2e-results.xml"
+        }
+      ],
+      [
+        "html",
+        {
+          "open": "on-failure"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 15000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {},
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "version": "1.45.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "tests-e2e/lottery-plus-e2e.spec.ts",
+      "file": "tests-e2e/lottery-plus-e2e.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Verify that user can view order summary at the payment page ",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 0,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "status": "failed",
+                  "duration": 32853,
+                  "error": {
+                    "message": "Error: page.waitForTimeout: Target page, context or browser has been closed",
+                    "stack": "Error: page.waitForTimeout: Target page, context or browser has been closed\n    at SummaryTopUpPage.goTopUpPage (/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts:21:21)\n    at /Users/bitazza/Documents/GitHub/7solutions-qa-automation/tests-e2e/lottery-plus-e2e.spec.ts:17:3",
+                    "location": {
+                      "file": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts",
+                      "column": 21,
+                      "line": 21
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39melements/pages/summary-topup.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpMenuLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39macceptButtonLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m30000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpMenuLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpageTitleLocator)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'เติมนกแคช'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpConfirmButtonLocator)\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts",
+                        "column": 21,
+                        "line": 21
+                      },
+                      "message": "Error: page.waitForTimeout: Target page, context or browser has been closed\n\n\u001b[90m   at \u001b[39melements/pages/summary-topup.ts:21\n\n\u001b[0m \u001b[90m 19 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpMenuLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39macceptButtonLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 21 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpage\u001b[33m.\u001b[39mwaitForTimeout(\u001b[35m30000\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 22 |\u001b[39m     \u001b[36mawait\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpMenuLocator\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m 23 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mpageTitleLocator)\u001b[33m.\u001b[39mtoHaveText(\u001b[32m'เติมนกแคช'\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(\u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mtopUpConfirmButtonLocator)\u001b[33m.\u001b[39mtoBeDisabled()\u001b[33m;\u001b[39m\u001b[0m\n\n\u001b[2m    at SummaryTopUpPage.goTopUpPage (/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts:21:21)\u001b[22m\n\u001b[2m    at /Users/bitazza/Documents/GitHub/7solutions-qa-automation/tests-e2e/lottery-plus-e2e.spec.ts:17:3\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-03-05T02:26:54.171Z",
+                  "attachments": [],
+                  "errorLocation": {
+                    "file": "/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts",
+                    "column": 21,
+                    "line": 21
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "1c5da62887d036a74f4b-4af9b0356d2bd9631e5d",
+          "file": "tests-e2e/lottery-plus-e2e.spec.ts",
+          "line": 4,
+          "column": 5
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-03-05T02:26:53.907Z",
+    "duration": 33815.891,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

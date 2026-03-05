@@ -1,0 +1,25 @@
+<testsuites id="" name="" tests="1" failures="1" skipped="0" errors="0" time="33.815891">
+<testsuite name="tests-e2e/lottery-plus-e2e.spec.ts" timestamp="2026-03-05T02:26:53.965Z" hostname="chrome" tests="1" failures="1" skipped="0" time="32.853" errors="0">
+<testcase name="Verify that user can view order summary at the payment page " classname="tests-e2e/lottery-plus-e2e.spec.ts" time="32.853">
+<failure message="lottery-plus-e2e.spec.ts:4:5 Verify that user can view order summary at the payment page " type="FAILURE">
+<![CDATA[  [chrome] › tests-e2e/lottery-plus-e2e.spec.ts:4:5 › Verify that user can view order summary at the payment page  
+
+    Error: page.waitForTimeout: Target page, context or browser has been closed
+
+       at elements/pages/summary-topup.ts:21
+
+      19 |     await this.topUpMenuLocator.click();
+      20 |     await this.acceptButtonLocator.click();
+    > 21 |     await this.page.waitForTimeout(30000);
+         |                     ^
+      22 |     await this.topUpMenuLocator.click();
+      23 |     await expect(this.pageTitleLocator).toHaveText('เติมนกแคช');
+      24 |     await expect(this.topUpConfirmButtonLocator).toBeDisabled();
+
+        at SummaryTopUpPage.goTopUpPage (/Users/bitazza/Documents/GitHub/7solutions-qa-automation/elements/pages/summary-topup.ts:21:21)
+        at /Users/bitazza/Documents/GitHub/7solutions-qa-automation/tests-e2e/lottery-plus-e2e.spec.ts:17:3
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
